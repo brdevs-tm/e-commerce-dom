@@ -1,0 +1,56 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../base/reset';
+@use '../base/font';
+
+footer{
+    width: 100%;
+    font-family: 'Rubik';
+    padding: 1rem 0;
+    background-color: #F9F4E2;
+    background-image: url(../../assets/images/footerbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90px;
+    @media (max-width: 700px) {
+        margin-bottom: 60px;
+    }
+    .wrapper{
+        width: 100%;
+        @include df($jc: space-between);
+        @media (max-width: 1150px) {
+            flex-direction: column;
+        }
+        .footer__contact{
+            @include df($fd: column);
+            gap: 1rem;
+            div{
+            @include df;
+            gap: .5rem;
+            font-size: 14px;
+            }
+        }
+        .footer__content{
+            @include df($jc: center);
+            @media (max-width: 1150px) {
+                width: 100%;
+            }
+            .footer__menu{
+                ul{
+                    li{
+                        float: left;
+                        margin: 1rem;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .footer__icons{
+            @include df;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+    }
+}

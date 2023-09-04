@@ -1,0 +1,22 @@
+@mixin df($jc: center, $ai: center, $fd: row){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+@mixin button($width: 256px, $height: 40px, $bg, $color, $border: false, $font, $pd){
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    color: $color;
+    font-size: $font;
+    padding: $pd;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    @if($border){
+        border: 1px solid #70C05B;
+    }
+}
